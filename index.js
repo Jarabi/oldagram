@@ -31,9 +31,14 @@ const posts = [
 
 const icons = ['heart', 'comment', 'dm'];
 
+// Get main element
+const mainEl = document.querySelector('main');
+
+// Get post template
+const postTemplate = document.getElementById('post-template');
+
 window.addEventListener('load', () => {
-    const mainEl = document.querySelector('main');
-    const postTemplate = document.getElementById('post-template'); // Get template
+    mainEl.textContent = '';
 
     posts.forEach((post) => {
         // Clone template
